@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "./App.css";
 
 function App() {
     const movies = [
@@ -37,18 +38,8 @@ function App() {
             </ul>
             <h2>My favourite movie for today is {title}</h2>
             <p>{message}</p>
-            <input 
-                type="text" 
-                value={title} 
-                onChange={handleChange}
-                style={{border: "1px solid black", padding: "5px"}}
-            />
-            <button 
-                onClick={handleClick}
-                style={{border: "1px solid black", padding: "5px", marginLeft: "10px"}}
-            >
-                Pokaż tytuł filmu
-            </button>
+            <input type="text" value={title} onChange={handleChange}/>
+            <button onClick={handleClick}>Pokaż tytuł filmu</button>
         </div>
     );
 }
